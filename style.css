@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/***** reusable *****/
+.row { 
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.heading-main h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.heading-main h2:after {
+    content: ""; /* tímto říkám, že tam nic nechci*/
+    display: block;
+    width: 150px;
+    border-bottom: 2px solid #dc4f00;
+    margin: 20px auto; /* první číslo (20px) je nahoře a dole, to auto je v levo a pravo*/
+}
+
+.empty-space {
+    height: 50px;
+}
+
+/***** header *****/
+header {
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("img/pizza-cheese.jpg");
+    background-size: cover; 
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.nav-background {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 50;
+    border-bottom: 2px solid #fff;
+}
+
+
+#logo img {
+    width: 200px;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    transform: translate(-20%, -20%);
+}
+
+nav ul {
+    float: right;
+    margin-top: 7px;
+    position: fixed;
+    margin-left: 28%;
+    z-index: 100;/* Máme několik vrstev a chceme aby jedna byla výše*/
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+nav ul li a:hover,
+nav ul li a:active {
+    transition: border-bottom 0.5s;
+    border-bottom: 2px solid #dc4f00;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.header-text h1 {
+    color: #ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    word-spacing: 3.5px;
+}
+
+
+/***** button *****/
+.btn {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    border: 1px solid #dc4f00;
+    border-radius: 10px;
+    margin-top: 7px;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+}
+
+.btn-full:link, /* normal behavior*/
+.btn-full:visited {
+    background: #dc4f00;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    transition: background 0.5s;
+    background: #a93d00;
+    border: 1px solid #dc4f00;
+}
+
+.btn-empty:link,
+.btn-empty:visited {
+    margin-left: 5px;
+    background: transparent;
+}
+
+.btn-empty:hover,
+.btn-empty:active {
+    transition: background 0.5s;
+    background: #a93d00;
+    border: 1px solid #a93d00;
+}
+
+/***** Mobile navigation *****/
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 5px;
+    display: none;
+}
+
+
+
+/***** About Us *****/
+.pizza-example img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 6px 10px #000;
+}
+
+/***** Our pizza *****/
+.pizza-info img {
+    width: 100%;
+    height: 270px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 10px #000;
+}
+
+.text-pizza {
+    margin-bottom: 20px;
+}
+
+.text-pizza div {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    text-align: center;
+    border-radius: 50%;
+    padding: 12px;
+    float: left;
+}
+
+.text-pizza p {
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+/***** References *****/
+.reference {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/pizza-cheese.jpg);
+    background-attachment: fixed;
+}
+
+.reference h2 {
+    color: #fff;
+    padding-top: 15px;
+}
+
+.reference h2:after {
+    border-bottom: 2px solid #fff;
+}
+
+.one-reference {
+    color:#fff;
+    font-size: 20px;
+}
+
+.one-reference p {
+    font-style: italic;
+}
+
+.photo-name {
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.photo-name p {
+    padding: 13px;
+    margin-left: 50px;
+    font-style: normal;
+}
+
+.photo-name img {
+    width: 50px;
+    border-radius: 50px;
+    float: left;
+}
+
+/***** Photo gallery *****/
+.photo-segment li {
+    list-style-type: none;
+    background-color: #000;
+    overflow: hidden;
+    height: 300px;
+}
+
+.photo-segment img {
+    width: 100%;
+    height: 300px;
+    opacity: 0.5;
+    transform: scale(1.15);
+}
+
+.photo-segment img:hover {
+    transition: transform 0.5s, opacity 0.5s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+/***** Contact form *****/
+.contact-form {
+    max-width: 700px;
+    text-align: center;
+
+}
+
+.contact-form input {
+    width: 80%;
+    margin: 5px 0px;
+    padding: 7px; /* prostor pro text*/
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.contact-form textarea {
+    width: 80%;
+    margin: 5px 0px;
+    padding: 7px; /* prostor pro text*/
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    font-family: Arial;
+}
+
+input[type="submit"] {
+    background-color:#aa4309;
+    color: #fff;
+    font-size: 20px;
+}
+
+input[type="submit"]:hover {
+    transition: background-color 0.5s;
+    background-color:#dc4f00;
+    color: #000;
+}
+
+/***** Footer *****/
+.footer-page {
+    background: #aa4309;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.social {
+    text-align: center;
+    margin: 10px 0;
+}
+  
+.social p {
+    display: inline;
+    margin-right: 20px;
+}
+
+.social p a:link,
+.social p a:visited {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+}
+
+.social p a:hover,
+.social p a:active {
+    color: #000;
+}
+
+.footer-text {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/***** Stop floating *****/
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
